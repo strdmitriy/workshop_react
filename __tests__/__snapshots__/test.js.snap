@@ -1,107 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tabs active tab-1 1`] = `
-<div
-  class="react-tabs"
-  data-tabs="true"
->
-  <ul
-    class="react-tabs__tab-list"
-    role="tablist"
-  >
-    <li
-      aria-controls="react-tabs-5"
-      aria-disabled="false"
-      aria-selected="true"
-      class="react-tabs__tab react-tabs__tab--selected"
-      data-test="tab-1"
-      id="react-tabs-4"
-      role="tab"
-      tabindex="0"
-    >
-      Title 1
-    </li>
-    <li
-      aria-controls="react-tabs-7"
-      aria-disabled="false"
-      aria-selected="false"
-      class="react-tabs__tab"
-      data-test="tab-2"
-      id="react-tabs-6"
-      role="tab"
-    >
-      Title 2
-    </li>
-  </ul>
+Array [
   <div
-    aria-labelledby="react-tabs-4"
-    class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    id="react-tabs-5"
-    role="tabpanel"
+    class="react-tabs"
+    data-tabs="true"
   >
-    <h2>
-      Any content 1
-    </h2>
-  </div>
-  <div
-    aria-labelledby="react-tabs-6"
-    class="react-tabs__tab-panel"
-    id="react-tabs-7"
-    role="tabpanel"
-  />
-</div>
+    <ul
+      class="react-tabs__tab-list"
+      role="tablist"
+    >
+      <li
+        aria-controls="react-tabs-3"
+        aria-disabled="false"
+        aria-selected="true"
+        class="react-tabs__tab react-tabs__tab--selected"
+        data-test="tab-0"
+        id="react-tabs-2"
+        role="tab"
+        tabindex="0"
+      >
+        Title 0
+      </li>
+    </ul>
+    <div
+      aria-labelledby="react-tabs-2"
+      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      id="react-tabs-3"
+      role="tabpanel"
+    >
+      <h2>
+        Any content 0
+      </h2>
+    </div>
+  </div>,
+  <button
+    data-test="button-add"
+  >
+    Добавить таб
+  </button>,
+  <button
+    data-test="button-remove"
+  >
+    Удалить таб
+  </button>,
+]
 `;
 
-exports[`Tabs active tab-2 1`] = `
-<div
-  class="react-tabs"
-  data-tabs="true"
->
-  <ul
-    class="react-tabs__tab-list"
-    role="tablist"
-  >
-    <li
-      aria-controls="react-tabs-9"
-      aria-disabled="false"
-      aria-selected="false"
-      class="react-tabs__tab"
-      data-test="tab-1"
-      id="react-tabs-8"
-      role="tab"
-    >
-      Title 1
-    </li>
-    <li
-      aria-controls="react-tabs-11"
-      aria-disabled="false"
-      aria-selected="true"
-      class="react-tabs__tab react-tabs__tab--selected"
-      data-test="tab-2"
-      id="react-tabs-10"
-      role="tab"
-      tabindex="0"
-    >
-      Title 2
-    </li>
-  </ul>
+exports[`Tabs added tab 1`] = `
+Array [
   <div
-    aria-labelledby="react-tabs-8"
-    class="react-tabs__tab-panel"
-    id="react-tabs-9"
-    role="tabpanel"
-  />
-  <div
-    aria-labelledby="react-tabs-10"
-    class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    id="react-tabs-11"
-    role="tabpanel"
+    class="react-tabs"
+    data-tabs="true"
   >
-    <h2>
-      Any content 3
-    </h2>
-  </div>
-</div>
+    <ul
+      class="react-tabs__tab-list"
+      role="tablist"
+    >
+      <li
+        aria-controls="react-tabs-5"
+        aria-disabled="false"
+        aria-selected="true"
+        class="react-tabs__tab react-tabs__tab--selected"
+        data-test="tab-0"
+        id="react-tabs-4"
+        role="tab"
+        tabindex="0"
+      >
+        Title 0
+      </li>
+      <li
+        aria-controls="react-tabs-7"
+        aria-disabled="false"
+        aria-selected="false"
+        class="react-tabs__tab"
+        data-test="tab-1"
+        id="react-tabs-6"
+        role="tab"
+      >
+        Title 1
+      </li>
+    </ul>
+    <div
+      aria-labelledby="react-tabs-4"
+      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+      id="react-tabs-5"
+      role="tabpanel"
+    >
+      <h2>
+        Any content 0
+      </h2>
+    </div>
+    <div
+      aria-labelledby="react-tabs-6"
+      class="react-tabs__tab-panel"
+      id="react-tabs-7"
+      role="tabpanel"
+    />
+  </div>,
+  <button
+    data-test="button-add"
+  >
+    Добавить таб
+  </button>,
+  <button
+    data-test="button-remove"
+  >
+    Удалить таб
+  </button>,
+]
 `;
 
 exports[`Tabs renders correctly 1`] = `
@@ -136,11 +143,11 @@ exports[`Tabs renders correctly 1`] = `
             >
               <Tab
                 className="react-tabs__tab"
-                data-test="tab-1"
+                data-test="tab-0"
                 disabledClassName="react-tabs__tab--disabled"
                 focus={false}
                 id="react-tabs-0"
-                key=".0"
+                key=".$0"
                 panelId="react-tabs-1"
                 selected={true}
                 selectedClassName="react-tabs__tab--selected"
@@ -151,37 +158,12 @@ exports[`Tabs renders correctly 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   className="react-tabs__tab react-tabs__tab--selected"
-                  data-test="tab-1"
+                  data-test="tab-0"
                   id="react-tabs-0"
                   role="tab"
                   tabIndex="0"
                 >
-                  Title 1
-                </li>
-              </Tab>
-              <Tab
-                className="react-tabs__tab"
-                data-test="tab-2"
-                disabledClassName="react-tabs__tab--disabled"
-                focus={false}
-                id="react-tabs-2"
-                key=".1"
-                panelId="react-tabs-3"
-                selected={false}
-                selectedClassName="react-tabs__tab--selected"
-                tabRef={[Function]}
-              >
-                <li
-                  aria-controls="react-tabs-3"
-                  aria-disabled="false"
-                  aria-selected="false"
-                  className="react-tabs__tab"
-                  data-test="tab-2"
-                  id="react-tabs-2"
-                  role="tab"
-                  tabIndex={null}
-                >
-                  Title 2
+                  Title 0
                 </li>
               </Tab>
             </ul>
@@ -190,7 +172,7 @@ exports[`Tabs renders correctly 1`] = `
             className="react-tabs__tab-panel"
             forceRender={false}
             id="react-tabs-1"
-            key=".1"
+            key=".1:$0"
             selected={true}
             selectedClassName="react-tabs__tab-panel--selected"
             tabId="react-tabs-0"
@@ -202,29 +184,25 @@ exports[`Tabs renders correctly 1`] = `
               role="tabpanel"
             >
               <h2>
-                Any content 1
+                Any content 0
               </h2>
             </div>
-          </TabPanel>
-          <TabPanel
-            className="react-tabs__tab-panel"
-            forceRender={false}
-            id="react-tabs-3"
-            key=".2"
-            selected={false}
-            selectedClassName="react-tabs__tab-panel--selected"
-            tabId="react-tabs-2"
-          >
-            <div
-              aria-labelledby="react-tabs-2"
-              className="react-tabs__tab-panel"
-              id="react-tabs-3"
-              role="tabpanel"
-            />
           </TabPanel>
         </div>
       </UncontrolledTabs>
     </Tabs>
+    <button
+      data-test="button-add"
+      onClick={[Function]}
+    >
+      Добавить таб
+    </button>
+    <button
+      data-test="button-remove"
+      onClick={[Function]}
+    >
+      Удалить таб
+    </button>
   </ListTabs>
 </App>
 `;

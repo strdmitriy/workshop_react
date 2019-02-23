@@ -1,5 +1,8 @@
+import 'react-log-state';
 import React from 'react';
 import App from '../src/App';
+
+ReactLogState.logAll(); // eslint-disable-line
 
 describe('Tabs', () => {
   const dataTest = 'li[data-test^="tab"]';
@@ -11,15 +14,15 @@ describe('Tabs', () => {
   it('active tab-1', () => {
     const content = mount(<App />);
     const tab = content.find(dataTest).at(0);
-    console.log(tab);
     tab.simulate('click');
     expect(content.render()).toMatchSnapshot();
   });
 
-  it('active tab-2', () => {
+  it('added tab', () => {
     const content = mount(<App />);
-    const tab = content.find(dataTest).at(1);
+    const tab = content.find('button[data-test="button-add"]');
     tab.simulate('click');
+    console.log(content);
     expect(content.render()).toMatchSnapshot();
   });
 });
