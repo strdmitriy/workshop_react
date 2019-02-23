@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import Tabs from '../src/components/App';
 
 it('renders correctly', () => {
@@ -7,9 +6,16 @@ it('renders correctly', () => {
   expect(content).toMatchSnapshot();
 });
 
-it('active tab', () => {
+it('active tab-1', () => {
   const content = mount(<Tabs />);
-  const tab = content.find('#react-tabs-2');
-  console.log(tab);
-  expect(content).toMatchSnapshot();
+  const tab = content.find('li[data="tab-1"]');
+  tab.simulate('click');
+  expect(content.render()).toMatchSnapshot();
+});
+
+it('active tab-2', () => {
+  const content = mount(<Tabs />);
+  const tab = content.find('li[data="tab-2"]');
+  tab.simulate('click');
+  expect(content.render()).toMatchSnapshot();
 });

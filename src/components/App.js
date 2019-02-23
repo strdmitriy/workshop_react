@@ -5,8 +5,8 @@ import "react-tabs/style/react-tabs.css";
 export default () => (
   <Tabs>
     <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
+      <Tab data="tab-1">Title 1</Tab>
+      <Tab data="tab-2">Title 2</Tab>
     </TabList>
 
     <TabPanel>
@@ -17,4 +17,3 @@ export default () => (
     </TabPanel>
   </Tabs>
 );
-
