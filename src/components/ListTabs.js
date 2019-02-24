@@ -16,8 +16,8 @@ const tabsList = [
     id: 1,
   },
   {
-    name: 'Title 2',
-    content: 'Content 2',
+    name: 'Title 3',
+    content: 'Content 3',
     id: 2,
   },
 ];
@@ -47,7 +47,7 @@ class ListTabs extends React.Component {
           <TabList data-test="list-tabs">
             {
               this.state.tabs.map((tab, index) => (
-                <Tab key={index} data-test={`tab-${index}`}>{`Title ${index}`}</Tab>
+                <Tab key={index} data-test="tab">{`Title ${index}`}</Tab>
               ))
             }
           </TabList>

@@ -16,7 +16,7 @@ Array [
         aria-disabled="false"
         aria-selected="true"
         class="react-tabs__tab react-tabs__tab--selected"
-        data-test="tab-0"
+        data-test="tab"
         id="react-tabs-6"
         role="tab"
         tabindex="0"
@@ -28,7 +28,7 @@ Array [
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
-        data-test="tab-1"
+        data-test="tab"
         id="react-tabs-8"
         role="tab"
       >
@@ -39,7 +39,7 @@ Array [
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
-        data-test="tab-2"
+        data-test="tab"
         id="react-tabs-10"
         role="tab"
       >
@@ -116,7 +116,7 @@ exports[`Tabs renders correctly 1`] = `
             >
               <Tab
                 className="react-tabs__tab"
-                data-test="tab-0"
+                data-test="tab"
                 disabledClassName="react-tabs__tab--disabled"
                 focus={false}
                 id="react-tabs-0"
@@ -131,7 +131,7 @@ exports[`Tabs renders correctly 1`] = `
                   aria-disabled="false"
                   aria-selected="true"
                   className="react-tabs__tab react-tabs__tab--selected"
-                  data-test="tab-0"
+                  data-test="tab"
                   id="react-tabs-0"
                   role="tab"
                   tabIndex="0"
@@ -141,7 +141,7 @@ exports[`Tabs renders correctly 1`] = `
               </Tab>
               <Tab
                 className="react-tabs__tab"
-                data-test="tab-1"
+                data-test="tab"
                 disabledClassName="react-tabs__tab--disabled"
                 focus={false}
                 id="react-tabs-2"
@@ -156,7 +156,7 @@ exports[`Tabs renders correctly 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   className="react-tabs__tab"
-                  data-test="tab-1"
+                  data-test="tab"
                   id="react-tabs-2"
                   role="tab"
                   tabIndex={null}
@@ -166,7 +166,7 @@ exports[`Tabs renders correctly 1`] = `
               </Tab>
               <Tab
                 className="react-tabs__tab"
-                data-test="tab-2"
+                data-test="tab"
                 disabledClassName="react-tabs__tab--disabled"
                 focus={false}
                 id="react-tabs-4"
@@ -181,7 +181,7 @@ exports[`Tabs renders correctly 1`] = `
                   aria-disabled="false"
                   aria-selected="false"
                   className="react-tabs__tab"
-                  data-test="tab-2"
+                  data-test="tab"
                   id="react-tabs-4"
                   role="tab"
                   tabIndex={null}

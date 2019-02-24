@@ -4,6 +4,8 @@ import React from 'react';
 import App from '../src/App';
 
 ReactLogState.logAll(); // eslint-disable-line
+const dataTab = 'li[data-test="tab"]';
+const listOfTabs = 'ul[data-test="list-tabs"]';
 
 describe('Tabs', () => {
   const dataTest = 'li[data-test^="tab"]';
@@ -24,16 +26,20 @@ describe('Create/Remove', () => {
   it('added tab', () => {
     const content = mount(<App />);
     const addButton = content.find('[data-test="button-add"]');
+    const listOfTabsBeforeCreation = content.find(listOfTabs);
+    expect(listOfTabsBeforeCreation).toContainMatchingElements(3, dataTab);
     addButton.simulate('click');
-    const listOfTabs = content.find('[data-test="list-tabs"]');
-    expect(listOfTabs.children().length - 1).toBe(4);
+    const listOfTabsAfterCreation = content.find(listOfTabs);
+    expect(listOfTabsAfterCreation).toContainMatchingElements(4, dataTab);
   });
 
   it('remove tab', () => {
     const content = mount(<App />);
-    const removeButton = content.find('[data-test="button-remove"]');
-    removeButton.simulate('click');
-    const listOfTabs = content.find('[data-test="list-tabs"]');
-    expect(listOfTabs.children().length - 1).toBe(2);
+    const addButton = content.find('[data-test="button-remove"]');
+    const listOfTabsBeforeCreation = content.find(listOfTabs);
+    expect(listOfTabsBeforeCreation).toContainMatchingElements(3, dataTab);
+    addButton.simulate('click');
+    const listOfTabsAfterCreation = content.find(listOfTabs);
+    expect(listOfTabsAfterCreation).toContainMatchingElements(2, dataTab);
   });
 });
