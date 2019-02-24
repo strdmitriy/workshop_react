@@ -20,7 +20,7 @@ describe('Tabs', () => {
   });
 });
 
-describe('Create', () => {
+describe('Create/Remove', () => {
   it('added tab', () => {
     const content = mount(<App />);
     const addButton = content.find('[data-test="button-add"]');
