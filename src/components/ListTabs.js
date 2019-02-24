@@ -10,12 +10,22 @@ const tabsList = [
     content: 'Content 1',
     id: 0,
   },
+  {
+    name: 'Title 2',
+    content: 'Content 2',
+    id: 1,
+  },
+  {
+    name: 'Title 2',
+    content: 'Content 2',
+    id: 2,
+  },
 ];
 
 class ListTabs extends React.Component {
   state = {
     tabs: tabsList,
-    count: 1,
+    count: 3,
   }
 
   handlerAddTabs = () => {
@@ -34,7 +44,7 @@ class ListTabs extends React.Component {
     return (
       <React.Fragment>
         <Tabs>
-          <TabList>
+          <TabList data-test="tab-list">
             {
               this.state.tabs.map((tab, index) => (
                 <Tab key={index} data-test={`tab-${index}`}>{`Title ${index}`}</Tab>

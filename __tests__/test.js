@@ -1,4 +1,5 @@
 import 'react-log-state';
+import { mount } from 'enzyme';
 import React from 'react';
 import App from '../src/App';
 
@@ -17,12 +18,20 @@ describe('Tabs', () => {
     tab.simulate('click');
     expect(content.render()).toMatchSnapshot();
   });
+});
 
+describe('Create', () => {
   it('added tab', () => {
     const content = mount(<App />);
-    const tab = content.find('button[data-test="button-add"]');
-    tab.simulate('click');
-    console.log(content);
-    expect(content.render()).toMatchSnapshot();
+    const addButton = content.find('[data-test="button-add"]');
+    addButton.simulate('click');
+    expect(content).toContainMatchingElement('li[data-test="tab-1"]');
+  });
+
+  it('remove tab', () => {
+    const content = mount(<App />);
+    const addButton = content.find('[data-test="button-remove"]');
+    addButton.simulate('click');
+    expect(content.containsMatchingElement('li[data-test="tab-1"]')).toBe(false);
   });
 });
