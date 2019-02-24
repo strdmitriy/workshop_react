@@ -8,7 +8,7 @@ Array [
   >
     <ul
       class="react-tabs__tab-list"
-      data-test="tab-list"
+      data-test="list-tabs"
       role="tablist"
     >
       <li
@@ -106,12 +106,12 @@ exports[`Tabs renders correctly 1`] = `
         >
           <TabList
             className="react-tabs__tab-list"
-            data-test="tab-list"
+            data-test="list-tabs"
             key=".0"
           >
             <ul
               className="react-tabs__tab-list"
-              data-test="tab-list"
+              data-test="list-tabs"
               role="tablist"
             >
               <Tab

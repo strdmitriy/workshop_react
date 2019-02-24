@@ -25,13 +25,15 @@ describe('Create', () => {
     const content = mount(<App />);
     const addButton = content.find('[data-test="button-add"]');
     addButton.simulate('click');
-    expect(content).toContainMatchingElement('li[data-test="tab-1"]');
+    const listOfTabs = content.find('[data-test="list-tabs"]');
+    expect(listOfTabs.children().length - 1).toBe(4);
   });
 
   it('remove tab', () => {
     const content = mount(<App />);
-    const addButton = content.find('[data-test="button-remove"]');
-    addButton.simulate('click');
-    expect(content.containsMatchingElement('li[data-test="tab-1"]')).toBe(false);
+    const removeButton = content.find('[data-test="button-remove"]');
+    removeButton.simulate('click');
+    const listOfTabs = content.find('[data-test="list-tabs"]');
+    expect(listOfTabs.children().length - 1).toBe(2);
   });
 });

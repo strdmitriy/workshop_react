@@ -44,7 +44,7 @@ class ListTabs extends React.Component {
     return (
       <React.Fragment>
         <Tabs>
-          <TabList data-test="tab-list">
+          <TabList data-test="list-tabs">
             {
               this.state.tabs.map((tab, index) => (
                 <Tab key={index} data-test={`tab-${index}`}>{`Title ${index}`}</Tab>
